@@ -22,6 +22,7 @@ pipeline {
             }
         }
         stage("deploy") {
+            agent {label "worker"}
             steps {
                 sh "echo starting deployment"
             }
